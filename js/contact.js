@@ -23,7 +23,7 @@ form.addEventListener("submit", async function(event) {
     }
 
     // 將這裡替換成你的 Apps Script /exec 網址
-    const SCRIPT_URL = "請貼上你的Google Apps Script網址";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxyLpGTTsCVkh-kkziLiKT-vMR3F4Pt8Hq_MUUthO8kRgPwQaS5KT2dQ4yXplGoScR2oQ/exec";
 
     const formData = new URLSearchParams(
         new FormData(form)
