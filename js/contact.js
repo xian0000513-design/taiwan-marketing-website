@@ -1,6 +1,7 @@
+
 const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", async function(event) {
 
     event.preventDefault();
 
@@ -21,6 +22,42 @@ form.addEventListener("submit", function(event) {
         return;
     }
 
-    status.textContent = "表單畫面已完成，尚未連接資料寄送服務。";
+    // 將這裡替換成你的 Apps Script /exec 網址
+    const SCRIPT_URL = "請貼上你的Google Apps Script網址";
+
+    const formData = new URLSearchParams(
+        new FormData(form)
+    );
+
+    button.disabled = true;
+    button.textContent = "資料傳送中...";
+    status.textContent = "正在送出，請稍候。";
+
+    try {
+
+        await fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: formData
+        });
+
+        status.textContent =
+            "已送出表單要求，請稍候確認收件信箱。";
+
+        form.reset();
+
+    } catch (error) {
+
+        status.textContent =
+            "傳送時發生問題，請稍後再試或使用其他聯絡方式。";
+
+        console.error(error);
+
+    } finally {
+
+        button.disabled = false;
+        button.textContent = "送出諮詢需求 ↗";
+
+    }
 
 });
