@@ -34,30 +34,22 @@ form.addEventListener("submit", async function(event) {
     status.textContent = "正在送出，請稍候。";
 
     try {
+    await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+    });
 
-        await fetch(SCRIPT_URL, {
-            method: "POST",
-            mode: "no-cors",
-            body: formData
-        });
+    status.textContent = "已送出表單要求，請至電子郵件確認是否收到。";
+    form.reset();
 
-        status.textContent =
-            "已送出表單要求，請稍候確認收件信箱。";
+} catch (error) {
+    status.textContent = "傳送失敗，請稍後再試。";
+    console.error(error);
 
-        form.reset();
-
-    } catch (error) {
-
-        status.textContent =
-            "傳送時發生問題，請稍後再試或使用其他聯絡方式。";
-
-        console.error(error);
-
-    } finally {
-
-        button.disabled = false;
-        button.textContent = "送出諮詢需求 ↗";
-
-    }
+} finally {
+    button.disabled = false;
+    button.textContent = "送出諮詢需求 ↗";
+}
 
 });
