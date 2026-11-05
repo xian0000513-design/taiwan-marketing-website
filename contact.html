@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們｜台灣網路行銷推薦</title>
+    <meta name="description" content="歡迎與我們聯絡，分享你的行銷需求。">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        TAIWAN DIGITAL MARKETING
+    </a>
+
+    <nav>
+        <a href="index.html">首頁</a>
+        <a href="#about">關於我們</a>
+        <a href="contact.html">聯絡我們</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <p class="eyebrow">CONTACT / 聯絡我們</p>
+
+    <h1>你的下一步，<br>從一場對話開始。</h1>
+
+    <p class="intro">
+        想提升品牌曝光，或還在尋找行銷方向？
+        歡迎把想法告訴我們。
+    </p>
+</section>
+
+<section class="contact-info">
+    <p class="eyebrow">GET IN TOUCH</p>
+
+    <h2>選擇你習慣的方式，<br>與我們聯絡。</h2>
+
+    <div class="contact-grid">
+
+        <a href="tel:請填入你的電話" class="contact-card">
+            <span>01 / 電話諮詢</span>
+            <h3>點一下，立即撥號 ↗</h3>
+            <p>請填入你的聯絡電話</p>
+        </a>
+
+        <a href="#" class="contact-card">
+            <span>02 / LINE 聯絡</span>
+            <h3>LINE 線上聯繫 ↗</h3>
+            <p>請填入你的 LINE ID</p>
+        </a>
+
+        <a href="mailto:請填入你的Email" class="contact-card">
+            <span>03 / 電子郵件</span>
+            <h3>歡迎來信分享需求 ↗</h3>
+            <p>請填入你的電子郵件</p>
+        </a>
+
+    </div>
+</section>
+
+<section class="form-section">
+
+    <div class="form-heading">
+        <p class="eyebrow">TELL US YOUR IDEA</p>
+
+        <h2>留下你的行銷需求</h2>
+
+        <p>填寫以下資訊，方便我們了解並回覆您的詢問。</p>
+
+        <small>＊為必填欄位。</small>
+    </div>
+
+    <form id="contactForm">
+
+        <div class="honeypot" aria-hidden="true">
+            <label>請勿填寫此欄</label>
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label for="name">您的稱呼 ＊</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="如何稱呼您？"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">聯絡電話</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="方便聯絡的電話">
+            </div>
+
+            <div class="form-group">
+                <label for="email">電子郵件 ＊</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="service">想了解的服務</label>
+                <select id="service" name="service">
+                    <option value="">請選擇服務項目</option>
+                    <option value="SEO 搜尋引擎優化">SEO 搜尋引擎優化</option>
+                    <option value="社群行銷">社群行銷</option>
+                    <option value="網站設計">網站設計</option>
+                    <option value="品牌行銷">品牌行銷</option>
+                    <option value="其他服務">其他服務</option>
+                </select>
+            </div>
+
+            <div class="form-group full">
+                <label for="message">需求說明 ＊</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="請描述您的需求..."
+                    required></textarea>
+            </div>
+
+        </div>
+
+        <label class="consent">
+            <input type="checkbox" id="consent" required>
+            <span>
+                我同意提供上述資料供本次諮詢聯繫使用。
+            </span>
+        </label>
+
+        <button type="submit" id="submitBtn">
+            送出諮詢需求 ↗
+        </button>
+
+        <p id="formStatus" role="status"></p>
+
+    </form>
+
+    <p class="notice">
+        送出後將顯示資料處理結果。若無法送出，請使用其他聯絡方式。
+    </p>
+
+</section>
+
+</main>
+
+<footer id="about">
+    <div class="footer-logo">
+        TAIWAN DIGITAL MARKETING
+    </div>
+
+    <p>讓品牌，被需要的人看見。</p>
+
+    <p>© 2026 台灣網路行銷推薦</p>
+</footer>
+
+<script src="js/contact.js"></script>
+
+</body>
+</html>
